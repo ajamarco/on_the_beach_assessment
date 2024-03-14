@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: teal;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        padding: 3rem;
+      }
+
+      .filters {
+        position: relative;
+        height: 100vh;
+        width: 16rem /* 256px */;
+        margin-right: 2rem;
+      }
+
+      /*filter button */
+      .filterButton {
+        color: #000000;
+        font-size: 18px;
+        padding: 1.5rem;
+        border-radius: 0px;
+        border: 0px solid #3866a3;
+        background: #ffffff;
+        width: 100%;
+        text-align: left;
+        padding: 1rem 0 1rem 1.5rem;
+        margin: 0.1rem 0;
+        display: flex;
+      }
+
+      /*make any span element inside .filterButton, a bold text*/
+      .filterButton span {
+        font-weight: bold;
+      }
+
+      /*on hover the .filterButton, make the text underline and change the mouse coursor */
+      .filterButton:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .trips {
+        background-color: blue;
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        overflow: auto;
+        flex-basis: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="filters">
+        <button class="filterButton">
+          <p>Order By price</p>
+        </button>
+        <button class="filterButton">
+          <p>Order By Name</p>
+        </button>
+        <button class="filterButton">
+          <p>Order By Star</p>
+        </button>
+      </aside>
+
+      <div class="trips">
+        <h1>Trips</h1>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,7 +1,72 @@
 .trip_card {
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .hotel_info {
   display: flex;
+}
+
+.hotel_image {
+  flex-grow: 2;
+}
+
+.hotel_details {
+  flex-grow: 1;
+}
+
+.hotel_image {
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  position: relative;
+}
+
+.hotel_overview {
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+.button_more_info {
+  background: white;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  color: #17317f;
+}
+
+.hotel_overview_details {
+  padding: 0;
+  margin: 0;
+  text-overflow: clip;
+}
+
+.button_book {
+  width: 100%;
+  border: none;
+  background-color: #fedc07;
+  color: #17317f;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+}
+
+.button_book p {
+  text-align: center;
 }
