@@ -21,4 +21,7 @@ Things we like:
 - Error/warning free JavaScript
 - Clean flow of state throughout the application
 
-![](design.png)
+TODO:
+
+- split CSS
+- make sure semantic HTML is implemented
