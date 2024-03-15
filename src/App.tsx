@@ -12,13 +12,13 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <main className="container">
       <SortSelection
         activeSort={sortValue}
         handleSortChange={handleSortChange}
       />
       <Trips sortBy={sortValue} />
-    </div>
+    </main>
   );
 }
 

@@ -1,72 +1,107 @@
-.trip_card {
+.trip {
+  display: grid;
+  grid-template-columns: 600px auto;
+  grid-template-rows: 300px;
   background-color: white;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.hotel_info {
-  display: flex;
-}
-
-.hotel_image {
-  flex-grow: 2;
-}
-
-.hotel_details {
-  flex-grow: 1;
-}
-
-.hotel_image {
-  margin: 10px;
-  height: 300px;
-  width: 300px;
-  background-repeat: no-repeat;
+.trip__image {
+  /* background-repeat: no-repeat; */
   background-size: cover;
-  background-position: center center;
-  object-fit: cover;
-  position: relative;
+  display: grid;
+  grid-template-rows: 0.1fr;
+  grid-template-columns: 0.5fr;
+  align-content: flex-end;
 }
 
-.hotel_overview {
-  padding: 0;
+/*button at the bottom of the hotel image*/
+.trip__show_overview {
+  border: none;
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.trip__show_overview p {
   margin: 0;
-  margin-left: 10px;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  color: #142f81;
+  font-size: 14px;
+}
+
+/*trip info*/
+.trip__info {
+  padding: 10px;
+}
+
+/*trip hotel name*/
+.trip__info h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  color: #203984;
+}
+
+/*trip location*/
+.trip__info span {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.trip__info__details {
+  margin-bottom: 10px;
+}
+
+.trip__info__details p {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.trip__book_now {
+  height: 100px;
+  width: 100%;
+  border: none;
+  color: #142f81;
+  background-color: #fedc07;
+  cursor: pointer;
+}
+
+.trip__more_info {
+  grid-column: 1 / span 2;
+  padding: 0 10px;
 }
 
 .hide {
   display: none;
 }
 
-.button_more_info {
-  background: white;
-  border: none;
-  position: absolute;
-  bottom: 0;
-  padding: 10px;
-  color: #17317f;
+/*media query*/
+@media (max-width: 1200px) {
+  .trip {
+    grid-template-columns: 400px auto;
+  }
+
+  .trip__image {
+    grid-template-columns: auto;
+  }
 }
 
-.hotel_overview_details {
-  padding: 0;
-  margin: 0;
-  text-overflow: clip;
-}
+@media (max-width: 1000px) {
+  .trip {
+    grid-template-columns: 1fr;
+  }
 
-.button_book {
-  width: 100%;
-  border: none;
-  background-color: #fedc07;
-  color: #17317f;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: normal;
-  align-items: normal;
-  align-content: normal;
-}
+  .trip__image {
+    background-position: center center;
+  }
 
-.button_book p {
-  text-align: center;
+  .trip__more_info {
+    grid-column: 1;
+  }
 }

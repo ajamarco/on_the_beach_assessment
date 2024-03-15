@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 import { GoStarFill } from "react-icons/go";
 
+import "../styles/TripCard.css";
+
 interface TripCardProps {
   hotelName: string;
   hotelImage: string;
@@ -52,7 +54,7 @@ const TripCard = ({
   };
 
   return (
-    <div className="trip">
+    <article className="trip">
       <div
         className="trip__image"
         style={{ backgroundImage: `url(${hotelImage})` }}
@@ -93,7 +95,7 @@ const TripCard = ({
       >
         <p>{overview}</p>
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -84,7 +84,7 @@ const Trips = ({ sortBy }: { sortBy: string }) => {
     ));
   };
 
-  return <div className="trips">{renderTripCards()}</div>;
+  return <section className="trips">{renderTripCards()}</section>;
 };
 
 export default Trips;

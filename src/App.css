@@ -44,101 +44,10 @@ body {
   color: white;
 }
 
-.trip {
-  display: grid;
-  grid-template-columns: 600px auto;
-  grid-template-rows: 300px;
-  background-color: white;
-  margin-bottom: 20px;
-}
-
-.trip__image {
-  /* background-repeat: no-repeat; */
-  background-size: cover;
-  display: grid;
-  grid-template-rows: 0.1fr;
-  grid-template-columns: 0.5fr;
-  align-content: flex-end;
-}
-
-/*button at the bottom of the hotel image*/
-.trip__show_overview {
-  border: none;
-  text-align: left;
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-  align-content: center;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.trip__show_overview p {
-  margin: 0;
-  padding: 0;
-  color: #142f81;
-  font-size: 14px;
-}
-
-/*trip info*/
-.trip__info {
-  padding: 10px;
-}
-
-/*trip hotel name*/
-.trip__info h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: #203984;
-}
-
-/*trip location*/
-.trip__info span {
-  font-weight: 100;
-  font-size: 14px;
-}
-
-.trip__info__details {
-  margin-bottom: 10px;
-}
-
-.trip__info__details p {
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-}
-
-.trip__book_now {
-  height: 100px;
-  width: 100%;
-  border: none;
-  color: #142f81;
-  background-color: #fedc07;
-  cursor: pointer;
-}
-
-.trip__more_info {
-  grid-column: 1 / span 2;
-  padding: 0 10px;
-}
-
-.hide {
-  display: none;
-}
-
-/*create a media query for devices with a max-width of 768px*/
+/*media query*/
 @media (max-width: 1200px) {
   .container {
     grid-template-columns: 200px 800px;
-  }
-
-  .trip {
-    grid-template-columns: 400px auto;
-  }
-
-  .trip__image {
-    grid-template-columns: auto;
   }
 }
 
@@ -156,17 +65,5 @@ body {
 
   .container {
     grid-template-columns: 1fr;
-  }
-
-  .trip {
-    grid-template-columns: 1fr;
-  }
-
-  .trip__image {
-    background-position: center center;
-  }
-
-  .trip__more_info {
-    grid-column: 1;
   }
 }
