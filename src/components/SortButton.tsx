@@ -4,10 +4,12 @@ const SortButton = ({
   SortBy,
   active,
   clickHandler,
+  icon,
 }: {
   SortBy: string;
   active: boolean;
   clickHandler: (SortBy: string) => void;
+  icon?: JSX.Element;
 }) => {
   //creates function to handle the Click event
   const handleClick = () => {
@@ -19,7 +21,10 @@ const SortButton = ({
       className={active ? "sort__button sort__button__active" : "sort__button"}
       onClick={handleClick}
     >
-      Sort by <span>{SortBy}</span>
+      <p>
+        Sort by <span>{SortBy}</span>
+      </p>
+      {icon}
     </div>
   );
 };

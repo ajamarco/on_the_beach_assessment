@@ -75,9 +75,11 @@ const TripCard = ({
         <div className="trip__info__details">
           <p>{hotelOcupation}</p>
           <p>
-            {bookDate} for {bookPeriod}
+            <b>{bookDate}</b> for <b>{bookPeriod}</b>
           </p>
-          <p>departing from {departingFrom}</p>
+          <p>
+            departing from <b>{departingFrom}</b>
+          </p>
         </div>
         <button className="trip__book_now">
           <p>Book Now</p>
