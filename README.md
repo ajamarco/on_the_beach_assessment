@@ -1,5 +1,7 @@
 # On The Beach Assessment
 
+Live demo: https://jolly-dasik-50c7e7.netlify.app/
+
 This project is part of On The Beach's Frontend developer assessment.
 
 It is a simple project that demonstrates how components can be assembled to form a larger application. In this application, there's no need for any API calls, as everything is served statically. The client is expected to render it all.
