@@ -1,27 +1,36 @@
-# On the Beach Frontend Software Engineer code test
+# On The Beach Assessment
 
-Produce a HTML, CSS and JavaScript representation of the given `design.png` with the following features:
+This project is part of On The Beach's Frontend developer assessment.
 
-- Sort the results by price (this should be the default)
-- Sort the results by star rating and highlight when active
-- Sort the results alphabetically by hotel name and highlight when active
-- Ability to toggle expanded hotel description
+It is a simple project that demonstrates how components can be assembled to form a larger application. In this application, there's no need for any API calls, as everything is served statically. The client is expected to render it all.
 
-We are looking for a client side solution, there should be no server logic involved.
+- Components can be found in /src/components.
+- Assets (such as hotel images) can be found in /src/assets.
+- CSS files can be found in /src/styles.
 
-Feel free to use JavaScript libraries or frameworks. Imagine this will be a component added to a large website.
+### Components
 
-You may use things like CSS Preprocessors and JavaScript build tools, but if you do please include the dependencies/source files.
-Feel free to source your own icons.
+There are 4 components in this project:
 
-Things we like:
+- **SortSelection**: the sort menu.
+- **SortButton**: an individual Sort button for any of the 3 sorting capabilities.
+- **Trips**: the container for trips.
+- **TripCard**: an individual trip card.
 
-- Semantic HTML
-- Modular CSS
-- Error/warning free JavaScript
-- Clean flow of state throughout the application
+### Responsiveness
 
-TODO:
+The project also has a simple responsiveness system in place, since this wasn't in the design that was sent to me, so I decided to keep this simple.
 
-- split CSS
-- make sure semantic HTML is implemented
+### Sorting
+
+By clicking on any of the buttons on the left, the sorting is done by hotel name, price, or star rating (name from A to Z, price from lower to higher, and star rating from higher to lower).
+
+### Future Implementations
+
+As future implementations of this project, we could have:
+
+- Different types of filters (by location, star rating, date, etc.).
+- Different types of sorting (from Z to A - if clicked again on the 'sort by name' button -, price from higher to lower, etc.).
+- Improved responsiveness.
+- Improved compatibility, as I used flex grid to make the layout work. Maybe this won't work on some older browsers.
+- Adding additional information on each trip, as well as a Google Maps integration showing the location of the hotel on a map.
