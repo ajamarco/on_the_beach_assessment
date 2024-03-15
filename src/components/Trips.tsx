@@ -2,7 +2,6 @@ import TripCard from "./TripCard";
 import hotel1Image from "../assets/hotel-image-1.png";
 import hotel2Image from "../assets/hotel-image-2.png";
 import hotel3Image from "../assets/hotel-image-3.png";
-import { render } from "@testing-library/react";
 
 const Trips = ({ sortBy }: { sortBy: string }) => {
   console.log("we should sort by ", sortBy);
@@ -76,7 +75,10 @@ const Trips = ({ sortBy }: { sortBy: string }) => {
         bookDate={hotel.bookDate}
         bookPeriod={hotel.bookPeriod}
         departingFrom={hotel.departingFrom}
-        price={hotel.price}
+        price={hotel.price.toLocaleString("en-GB", {
+          style: "currency",
+          currency: "GBP",
+        })}
         overview={hotel.overview}
       />
     ));

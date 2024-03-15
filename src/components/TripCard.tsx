@@ -1,7 +1,6 @@
 import { useState } from "react";
-
-//import the css
-import "../styles/TripCard.css";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa";
+import { GoStarFill } from "react-icons/go";
 
 interface TripCardProps {
   hotelName: string;
@@ -12,7 +11,7 @@ interface TripCardProps {
   bookDate: string;
   bookPeriod: string;
   departingFrom: string;
-  price: number;
+  price: string;
   overview: string;
 }
 
@@ -29,6 +28,29 @@ const TripCard = ({
   overview,
 }: TripCardProps) => {
   const [showOverview, setShowOverview] = useState(false);
+
+  const renderOpenedOverview = () => {
+    return (
+      <>
+        <p>
+          <b>Read less</b> about this hotel
+        </p>
+        <FaChevronDown />
+      </>
+    );
+  };
+
+  const renderClosedOverview = () => {
+    return (
+      <>
+        <p>
+          <b>Read more</b> about this hotel
+        </p>
+        <FaChevronRight />
+      </>
+    );
+  };
+
   return (
     <div className="trip">
       <div
@@ -36,18 +58,20 @@ const TripCard = ({
         style={{ backgroundImage: `url(${hotelImage})` }}
       >
         <button
-          className="trip__button"
+          className="trip__show_overview"
           onClick={() => setShowOverview(!showOverview)}
         >
-          {showOverview
-            ? "Read less about this hotel"
-            : "Read more about this hotel"}
+          {showOverview ? renderOpenedOverview() : renderClosedOverview()}
         </button>
       </div>
       <div className="trip__info">
         <h1>{hotelName}</h1>
         <span>{hotelLocation}</span>
-        <p>XXXXX</p>
+        <p>
+          {Array.from({ length: starRating }, (_, index) => (
+            <GoStarFill color="#FEDC07" />
+          ))}
+        </p>
         <div className="trip__info__details">
           <p>{hotelOcupation}</p>
           <p>
@@ -57,7 +81,7 @@ const TripCard = ({
         </div>
         <button className="trip__book_now">
           <p>Book Now</p>
-          <h1>£{price}</h1>
+          <h1>{price}</h1>
         </button>
       </div>
       <div

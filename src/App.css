@@ -55,9 +55,23 @@ body {
   align-content: flex-end;
 }
 
-.trip__button {
+/*button at the bottom of the hotel image*/
+.trip__show_overview {
   border: none;
   text-align: left;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px;
+}
+
+.trip__show_overview p {
+  margin: 0;
+  padding: 0;
+  color: #142f81;
+  font-size: 14px;
 }
 
 /*trip info*/
