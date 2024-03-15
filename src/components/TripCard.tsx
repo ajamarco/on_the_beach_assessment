@@ -9,44 +9,43 @@ import "../styles/TripCard.css";
 const TripCard = () => {
   const [showOverview, setShowOverview] = useState(false);
   return (
-    <div className="trip_card">
-      <section className="hotel_info">
-        <div
-          className="hotel_image"
-          style={{ backgroundImage: `url(${image1})` }}
-        >
-          <button
-            className="button_more_info"
-            onClick={() => setShowOverview(!showOverview)}
-          >
-            <b>{showOverview ? "Read less" : "Read more"}</b> about this hotel
-          </button>
-        </div>{" "}
-        <div className="hotel_details">
-          <h2>IberoStar</h2>
-          <p>Tenerife</p>
-          <p>Star Rating</p>
-          <div className="hotel_more_info">
-            <p>2 Adults, 2 Children & 1 infant</p>
-            <p>3rd July 2019 for 7 days</p>
-            <p>Departing from East Midlands</p>
-          </div>
-          <button className="button_book">
-            <p>Book now</p>
-            <h1>£ 3,123.25</h1>
-          </button>
-        </div>
-      </section>
-      <section
-        className={showOverview ? "hotel_overview" : "hotel_overview hide"}
+    <div className="trip">
+      <div
+        className="trip__image"
+        style={{ backgroundImage: `url(${image1})` }}
       >
-        <h3>Overview</h3>
-        <p className="hotel_overview_details">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum.
-          Donec mollis hendrerit risus eu posuere.
+        <button
+          className="trip__button"
+          onClick={() => setShowOverview(!showOverview)}
+        >
+          Read more about this hotel
+        </button>
+      </div>
+      <div className="trip__info">
+        <h1>Iberostar</h1>
+        <span>Tenerife</span>
+        <p>XXXXX</p>
+        <div className="trip__info__details">
+          <p>2 adults, 2 children & 1 infant</p>
+          <p>3rd July 2019 for 7 days</p>
+          <p>departing from East Midlands</p>
+        </div>
+        <button className="trip__book_now">
+          <p>Book Now</p>
+          <h1>£1,200.00</h1>
+        </button>
+      </div>
+      <div
+        className={`trip__overview ${
+          showOverview ? "trip__more_info" : "trip__more_info hide"
+        }`}
+      >
+        <p>
+          this is more text about the hotelthis is more text about the hotelthis
+          is more text about the hotelthis is more text about the hotelthis is
+          more text about the hotel
         </p>
-      </section>
+      </div>
     </div>
   );
 };

@@ -4,49 +4,91 @@ body {
 
 /*container div*/
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 400px 1000px;
+  gap: 50px;
   padding: 3rem;
 }
 
 .filters {
-  position: relative;
-  height: 100vh;
-  width: 16rem /* 256px */;
-  margin-right: 2rem;
+  display: grid;
+  grid-template-columns: auto;
+  align-content: flex-start;
+  row-gap: 2px;
 }
 
-/*filter button */
-.filterButton {
-  color: #000000;
-  font-size: 18px;
-  padding: 1.5rem;
-  border-radius: 0px;
-  border: 0px solid #3866a3;
-  background: #ffffff;
-  width: 100%;
-  text-align: left;
-  padding: 1rem 0 1rem 1.5rem;
-  margin: 0.1rem 0;
-  display: flex;
-}
-
-/*make any span element inside .filterButton, a bold text*/
-.filterButton span {
-  font-weight: bold;
-}
-
-/*on hover the .filterButton, make the text underline and change the mouse coursor */
-.filterButton:hover {
-  text-decoration: underline;
+.filter {
+  background-color: white;
+  padding: 1rem;
   cursor: pointer;
+  height: 20px;
 }
 
-.trips {
-  background-color: blue;
-  flex-grow: 5;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
+.trip {
+  display: grid;
+  grid-template-columns: 600px auto;
+  grid-template-rows: 300px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.trip__image {
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 0.1fr;
+  grid-template-columns: 0.5fr;
+  align-content: flex-end;
+}
+
+.trip__button {
+  border: none;
+  text-align: left;
+}
+
+/*trip info*/
+.trip__info {
+  padding: 10px;
+}
+
+/*trip hotel name*/
+.trip__info h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  color: #203984;
+}
+
+/*trip location*/
+.trip__info span {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.trip__info__details {
+  margin-bottom: 10px;
+}
+
+.trip__info__details p {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.trip__book_now {
+  height: 100px;
+  width: 100%;
+  border: none;
+  color: #142f81;
+  background-color: #fedc07;
+}
+
+.trip__more_info {
+  grid-column: 1 / span 2;
+  padding: 0 10px;
+  /* display: none; */
+}
+
+.hide {
+  display: none;
 }

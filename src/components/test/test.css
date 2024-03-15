@@ -1,0 +1,14 @@
+.filter_test {
+  background-color: blue;
+  width: 16rem /* 256px */;
+  position: relative;
+}
+
+.trips_test {
+  background-color: red;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
