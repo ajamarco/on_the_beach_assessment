@@ -12,10 +12,7 @@ function App() {
   return (
     <div className="container">
       <SortSelection />
-      <div className="trips">
-        <TripCard />
-        <TripCard />
-      </div>
+      <Trips />
     </div>
   );
 }
