@@ -1,0 +1,14 @@
+.sort_selection {
+  display: grid;
+  grid-template-columns: auto;
+  align-content: flex-start;
+  row-gap: 2px;
+}
+
+@media (max-width: 1000px) {
+  .sort_selection {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
