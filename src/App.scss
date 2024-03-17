@@ -14,7 +14,7 @@ body {
 /*media query*/
 @media (max-width: 1200px) {
   .container {
-    grid-template-columns: 200px 800px;
+    grid-template-columns: 200px 700px;
   }
 }
 
@@ -25,6 +25,13 @@ body {
   }
 
   .container {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 }
