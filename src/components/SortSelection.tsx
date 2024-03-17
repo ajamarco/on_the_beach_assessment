@@ -3,7 +3,7 @@ import { MdSortByAlpha } from "react-icons/md";
 import { AiFillPoundCircle } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
 
-import "../styles/SortSelection.css";
+import "../styles/SortSelection.scss";
 
 const SortSelection = ({
   activeSort,

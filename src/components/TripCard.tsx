@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 import { GoStarFill } from "react-icons/go";
 
-import "../styles/TripCard.css";
+import "../styles/TripCard.scss";
 
 interface TripCardProps {
   hotelName: string;

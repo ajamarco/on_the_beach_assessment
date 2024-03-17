@@ -1,4 +1,4 @@
-import "../styles/SortButton.css";
+import "../styles/SortButton.scss";
 
 const SortButton = ({
   SortBy,

@@ -1,8 +1,10 @@
+@import "colours";
+
 .sort__button {
   background-color: white;
   padding: 1rem;
   cursor: pointer;
-  color: #17317f;
+  color: $indigo;
   font-size: 1.2rem;
   font-weight: 400;
   display: grid;
@@ -11,16 +13,18 @@
   align-content: center;
   padding: 10px;
   align-items: center;
+
+  //make the nested span bold
+  span {
+    font-weight: 600;
+  }
 }
 
-.sort__button span {
-  font-weight: 600;
-}
 .sort__button:hover {
   text-decoration: underline;
 }
 
 .sort__button.sort__button__active {
-  background-color: #17317f;
+  background-color: $indigo;
   color: white;
 }

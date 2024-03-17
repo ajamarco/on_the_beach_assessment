@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import SortSelection from "./components/SortSelection";
 import Trips from "./components/Trips";
 
